@@ -1,0 +1,37 @@
+/********************************************
+ * Contact section
+ *******************************************/
+
+ #contact-wrapper {
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+    color: #b3b3b3;
+}
+
+#contact-wrapper, #contact .section-title {
+    background-color: #3a4040;
+    background-image: url("../img/overlay.png");
+}
+
+.form-submit {
+    background-color: #4f886f;
+    background-image: url("../img/overlay.png");
+    border-color: #315445;
+}
+.form-submit:hover, .form-submit:active {
+    background-color: #498067;
+    border-color: #315445;
+}
+
+.horizontal-divider.contact { width: 94%; margin: 3rem auto 1.5rem; background-color: #4d4d4d; }
+@media (min-width: 992px) { .horizontal-divider.contact { display: none; } }
+
+#contact-wrapper a { color: #b3b3b3; }
+#contact-wrapper a:hover, #contact-wrapper a:active { color: #d4d4d4; text-decoration: none; }
+
+#contact-wrapper a .link-icon { color: #4f886f; }
+#contact-wrapper a:hover .link-icon { margin-left: 1px; color: #d4d4d4; }
+@media (min-width: 768px) { #contact-wrapper a:hover .link-icon { color: #4f886f; } }
+
+#contact-wrapper a .link-text { display: none; }
+@media (min-width: 768px) { #contact-wrapper a .link-text { display: inline; } }
