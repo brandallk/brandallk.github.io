@@ -1,2 +1,4 @@
 public/assets/
 public/img/
+node_modules/
+*.vscode/
