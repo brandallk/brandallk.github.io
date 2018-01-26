@@ -1,7 +1,22 @@
-/********************************************
- * Fonts
- *******************************************/
+
+/* Fonts */
 
  @import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500');
 
  * { font-family: 'Fira Sans', sans-serif; }
+
+/* Colors */
+
+$white:                     #fff;
+$grey-lightest:             #f2f2f2;
+$grey-lighter:              #d4d4d4;
+$grey-light:                #b3b3b3;
+
+  /* slate-greens */
+$primary-dark-muted:      #313d3d;
+$primary-dark-more-muted: #3a4040;
+
+/* greens */
+$alternate-muted:             #4f886f;
+$alternate-dark-muted:        #498067;
+$alternate-darker-muted:      #315445;
