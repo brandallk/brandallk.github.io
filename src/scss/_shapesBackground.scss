@@ -1,0 +1,59 @@
+.shapes-background {
+    margin: -7rem 0px;
+    width: 100%;
+    height: 40rem;
+}
+
+.shapes-wrapper {
+    position: relative;
+    margin: 0px 0px;
+    width: 100%;
+    height: 34rem;
+    overflow: hidden;
+}
+
+.central-box {
+    position: absolute;
+    width: 115%;
+    height: 25rem;
+    background-color: #b3b3b3;
+    top: 13%;
+    left: -7%;
+    transform: rotate(5deg);
+    overflow: hidden;
+}
+
+.inner, .outer {
+    position: absolute;
+    width: 75%;
+    height: 7rem;
+    background-color: #666;
+}
+
+.inner {
+    transform: rotate(-10deg);
+}
+
+.outer {
+    transform: rotate(-7deg);
+}
+
+.top.inner {
+    top: -5.5rem;
+    left: -13%;
+}
+
+.bottom.inner {
+    bottom: -6rem;
+    right: -13%;
+}
+
+.top.outer {
+    top: 5rem;
+    right: -13%;
+}
+
+.bottom.outer {
+    bottom: 5rem;
+    left: -14%;
+}
