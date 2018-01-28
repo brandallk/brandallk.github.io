@@ -16,7 +16,10 @@
     position: absolute;
     width: 115%;
     height: 25rem;
-    background-color: darken($primary-dark, 20);
+    background: linear-gradient(
+        darken($primary-dark, 25),
+        darken($primary-dark, 12)
+    );
     color: $light-med;
     top: 13%;
     left: -7%;
@@ -31,11 +34,11 @@
 }
 
 .top {
-    background-color: darken($primary-med, 25);
+    background-color: darken($primary-med, 27);
 }
 
 .bottom {
-    background-color: darken($primary-med, 12);
+    background-color: darken($primary-med, 10);
 }
 
 .inner {

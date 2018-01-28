@@ -1,10 +1,10 @@
 body {
-    background-color: $light-light;
+    background-color: $light-med;
 }
 
 .projects {
     position: relative;
-    background-color: $light-light;
+    // background-color: $light-med;
     padding-bottom: 1rem;
 }
 
@@ -15,7 +15,7 @@ body {
     height: 59rem;
     bottom: 0rem;
     left: 0;
-    background-color: $light-med;
+    background-color: $primary-light;
 }
 
 .project-grid {
@@ -29,18 +29,53 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: $light-med;
 }
 
-.project-card.dummy {
+.project-card.machine {
     display: none;
 }
 
 .project-card.title {
+    background-color: $neutral-dark;
+}
+
+.project-card.project.one {
+    background-color: $primary-dark;
+}
+
+.project-card.machine.one {
     background-color: $primary-light;
+}
+
+.project-card.project.two {
+    background-color: $contrast-1-dark;
+}
+
+.project-card.project.three {
+    background-color: $primary-med;
+}
+
+.project-card.project.four {
+    background-color: $neutral-dark;
+}
+
+.project-card.machine.three {
+    background-color: $light-med;
+}
+
+.project-card.project.five {
+    background-color: $primary-dark;
 }
 
 .project-card-wrapper {
     padding: 0 0.5rem;
+}
+
+.project-card.machine {
+    display: none;
+    justify-content: center;
+    align-items: center;
 }
 
 .project-card .machine {
@@ -53,22 +88,29 @@ body {
     letter-spacing: 0.1rem;
 }
 
+.project-title.alternate {
+    width: 80%;
+    margin-left: 10%;
+    max-height: 3.5rem;
+}
+
 .project-desc-short {
     font-size: 0.75rem;
     line-height: 1.5rem;
+    text-align: center;
 }
 
 
 
 
 /* temp */
-.project-card:nth-child(2n + 3) {
-    background-color: $primary-light;
-}
+// .project-card:nth-child(2n + 3) {
+//     background-color: $primary-light;
+// }
 
-.project-card:nth-child(2n) {
-    background-color: $primary-med;
-}
+// .project-card:nth-child(2n) {
+//     background-color: $primary-med;
+// }
 
 
 
@@ -78,13 +120,12 @@ body {
 }
 
 @media (min-width: 768px) {
-    .project-card { height: 12rem; &.dummy { display: block; } }
-    .project-card.title,
-    .project-card.three,
-    .project-card.five {  background-color: $primary-light;;  }
-    .project-card.one,
-    .project-card.two,
-    .project-card.four, { background-color: $primary-med;  }
+    .project-card { height: 12rem; &.machine { display: flex; } }
+    // .project-card.three,
+    // .project-card.five {  background-color: $primary-light; }
+    // .project-card.one,
+    // .project-card.two,
+    // .project-card.four, { background-color: $primary-med; }
     .project-grid { margin-top: 5rem; padding: 0 4rem; }
     .projects:before { height: 35rem; }
 }

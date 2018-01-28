@@ -13,18 +13,36 @@
 
 .about-title {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    color: lighten($primary-light, 15);
+    margin-bottom: 1rem;
+    letter-spacing: 3px;
+}
+
+.divider {
+    width: 3rem;
+    height: 2px;
+    background-color: lighten($primary-dark, 15);
+    margin: auto;
+    margin-bottom: 1rem;
 }
 
 .about .content {
-    font-size: 0.9rem;
-    line-height: 1.7rem;
-    font-size: 0.8rem;
+    letter-spacing: 1px;
+    color: lighten($primary-light, 10);
+    line-height: 1.5rem;
+    font-size: 0.7rem;
 }
 
 
 
 /* media queries */
+@media (min-width: 400px) {
+    .about-title { font-size: 1.1rem; margin-bottom: 2rem; }
+    .divider { margin-bottom: 2rem; }
+    .about .content { font-size: 0.8rem; line-height: 1.7rem; }
+}
+
 @media (min-width: 576px) {
     .about-content-wrapper { margin: 0 8rem; }
     .about-title { font-size: 1.5rem; }
