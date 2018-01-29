@@ -3,3 +3,4 @@ public/img/
 node_modules/
 *.vscode/
 privateReadme.md
+_public/
