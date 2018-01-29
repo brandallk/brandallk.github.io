@@ -27,10 +27,30 @@ section.skills {
     > .row {
         height: 100%;
         padding: 5rem 0;
+
+        @include MQ(SM) {
+            padding: 4.5rem 0;
+        }
     }
 
     .skills.first.row:before {
         left: -40%;
+
+        @include MQ(XXS) {
+            left: -47%;
+        }
+        @include MQ(SM) {
+            left: -45%;
+        }
+        @include MQ(MD) {
+            left: -43%;
+        }
+        @include MQ(LG) {
+            left: -47%;
+        }
+        @include MQ(XL) {
+            left: -50%;
+        }
     }
 
     .skills.second.row:before {
@@ -45,6 +65,10 @@ img.skill-icon {
     padding: 10%;
     transition: all 0.4s;
 
+    @include MQ(SM) {
+        width: 3rem;
+    }
+
     &:hover {
         background-color: $neutral-light;
         cursor: pointer;
@@ -54,6 +78,21 @@ img.skill-icon {
 .skills-section-title {
     display: none;
     position: absolute;
+
+    @include MQ(SM) {
+        display: block;
+        top: 10.7rem;
+        left: 12%;
+    }
+    @include MQ(MD) {
+        bottom: unset;
+        top: 4.7rem;
+        left: unset;
+        right: 22%;
+    }
+    @include MQ(LG) {
+        right: 26%;
+    }
 
     h2 {
         font-size: 2.5rem;
@@ -66,6 +105,20 @@ img.skill-icon {
     position: absolute;
     top: 16.4rem;
     right: 12%;
+
+    @include MQ(SM) {
+        top: 16.4rem;
+        right: 12%;
+    }
+    @include MQ(MD) {
+        top: unset;
+        bottom: 5rem;
+        right: unset;
+        left: 25%;
+    }
+    @include MQ(LG) {
+        left: 30%;
+    }
 }
 
 .btn.resume-link,
@@ -83,69 +136,4 @@ img.skill-icon {
     height: 8rem;
     background-color: $neutral-dark;
     border-radius: 50%;
-}
-
-
-
-@media (min-width: 400px) {
-    .skills-content .skills.first.row:before {
-        left: -47%;
-    }
-}
-
-@media (min-width: 576px) {
-    img.skill-icon {
-        width: 3rem;
-    }
-    .skills-content > .row {
-        padding: 4.5rem 0;
-    }
-    .skills-content .skills.first.row:before {
-        left: -45%;
-    }
-    .skills-section-title {
-        display: block;
-        top: 10.7rem;
-        left: 12%;
-    }
-    .resume {
-        top: 16.4rem;
-        right: 12%;
-    }
-}
-
-@media (min-width: 768px) {
-    .skills-content .skills.first.row:before {
-        left: -43%;
-    }
-    .skills-section-title {
-        bottom: unset;
-        top: 4.7rem;
-        left: unset;
-        right: 22%;
-    }
-    .resume {
-        top: unset;
-        bottom: 5rem;
-        right: unset;
-        left: 25%;
-    }
-}
-
-@media (min-width: 992px) {
-    .skills-content .skills.first.row:before {
-        left: -47%;
-    }
-    .skills-section-title {
-        right: 26%;
-    }
-    .resume {
-        left: 30%;
-    }
-}
-
-@media (min-width: 1200px) {
-    .skills-content .skills.first.row:before {
-        left: -50%;
-    }
 }

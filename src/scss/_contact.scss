@@ -1,14 +1,12 @@
-/********************************************
- * Contact section
- *******************************************/
 
  #contact-wrapper {
     padding-top: 9rem;
     padding-bottom: 4rem;
+    background-color: $secondary-dark;
     color: $light-med;
 }
 
-#contact-wrapper, #contact .section-title {
+#contact .section-title {
     background-color: $secondary-dark;
 }
 
@@ -16,20 +14,49 @@
     background-color: $primary-med;
     border-color: $primary-dark;
 }
-.form-submit:hover, .form-submit:active {
+.form-submit:hover,
+.form-submit:active {
     background-color: darken($primary-med, 5);
     border-color: $primary-dark;
 }
 
-.horizontal-divider.contact { width: 94%; margin: 3rem auto 1.5rem; background-color: $neutral-med2; }
-@media (min-width: 992px) { .horizontal-divider.contact { display: none; } }
+.horizontal-divider.contact {
+    width: 94%;
+    margin: 3rem auto 1.5rem;
+    background-color: $neutral-med2;
 
-#contact-wrapper a { color: $light-med; }
-#contact-wrapper a:hover, #contact-wrapper a:active { color: darken($light-med, 5); text-decoration: none; }
+    @include MQ(LG) {
+        display: none;
+    }
+}
 
-#contact-wrapper a .link-icon { color: $primary-med; }
-#contact-wrapper a:hover .link-icon { margin-left: 1px; color: darken($light-med, 5); }
-@media (min-width: 768px) { #contact-wrapper a:hover .link-icon { color: $primary-med; } }
+#contact-wrapper a {
+    color: $light-med;
 
-#contact-wrapper a .link-text { display: none; }
-@media (min-width: 768px) { #contact-wrapper a .link-text { display: inline; } }
+    &:hover,
+    &:active {
+        color: darken($light-med, 5);
+        text-decoration: none;
+
+        .link-icon {
+            margin-left: 1px;
+            color: darken($light-med, 5);
+        }
+    }
+
+    .link-icon {
+        color: $primary-med;
+
+        @include MQ(MD) {
+            color: $primary-med;
+        }
+    }
+
+    .link-text {
+        display: none;
+
+        @include MQ(MD) {
+            display: inline;
+        }
+    }
+}
