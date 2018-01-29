@@ -68,3 +68,33 @@
     bottom: 5rem;
     left: -14%;
 }
+
+
+
+section.skills {
+
+    .shapes-wrapper {
+        height: 40rem;
+    }
+
+    .central-box {
+        height: 30rem;
+    }
+    
+    .top.inner {
+        left: -26%;
+    }
+    
+    .bottom.inner {
+        right: -17%;
+    }
+    
+    .top.outer {
+        right: -23%;
+    }
+    
+    .bottom.outer {
+        left: -23%;
+    }
+
+}

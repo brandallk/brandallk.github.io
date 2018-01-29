@@ -1,10 +1,13 @@
 (function() {
     
-    $(document).ready( () => {
+    $(document).ready( function() {
         
         $(".nav-link").click(toggleActiveNavLink);
 
-        $(".contact-link").hover(toggleToolTip);
+        $(".skill-icon").on("mouseenter", updateSkillHighlite);
+        $(".skill-icon").on("click", updateSkillHighlite);
+
+        // $(".contact-link").hover(toggleToolTip);
     });
 
     function toggleActiveNavLink(evt) {
@@ -12,7 +15,14 @@
         $(this).addClass("active");
     }
 
-    function toggleToolTip(evt) {
-        $(this).tooltip('show');
+    function updateSkillHighlite(evt) {
+        var $name = $(this).attr("data-skillName");
+        var $proficiency = $(this).attr("data-skillProficiency");
+        $(".highlite-details .percentage").text($proficiency);
+        $(".highlite-details .skill-name").text($name);
     }
+
+    // function toggleToolTip(evt) {
+    //     $(this).tooltip('show');
+    // }
 })();

@@ -32,6 +32,16 @@ body {
     color: $light-med;
 }
 
+.project-card.project:hover {
+    // box-shadow: 0 0 7px $neutral-dark;
+    border: solid $primary-light;
+    cursor: pointer;
+}
+
+.project-card a:hover {
+    text-decoration: none;
+}
+
 .project-card.machine {
     display: none;
 }

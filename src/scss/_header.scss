@@ -2,9 +2,9 @@
   * Header
   *******************************************/
  
-  #header-wrapper {
+#header-wrapper {
     background:
-        url(../../img/banner-bg.svg)
+        url(../../img/banner-bg.png)
         center center / cover;
     // background: linear-gradient(
     //     $neutral-dark,
@@ -12,9 +12,11 @@
     //     darken($neutral-dark, 10)
     // );
     color: #b3b3b3;
-    padding-bottom: 14rem;
+    padding-bottom: 9rem;
     letter-spacing: 0.25rem;
 }
+
+@media (min-width: 576px) { #header-wrapper { padding-bottom: 14rem; } }
 
 
     /******* Navbar *******/

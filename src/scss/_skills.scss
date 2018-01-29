@@ -2,7 +2,7 @@
 
 section.skills {
     transform: rotate(180deg);
-    margin-top: -14rem;
+    margin-top: -6rem;
 }
 
 .skills-content-wrapper,
@@ -21,18 +21,13 @@ section.skills {
     overflow: hidden;
 }
 
-.skills-content .skills {
-    // margin-top: 4rem;
-    // padding: 0 10%;
-}
-
 .skills-content .skills:before {
     content: "";
     position: absolute;
     width: 150%;
     height: 2px;
     top: 50%;
-    background-color: white;
+    background-color: $light-med;
 }
 
 .skills-content .skills.first.row:before {
@@ -49,9 +44,15 @@ section.skills {
 
 img.skill-icon {
     width: 2rem;
-    background-color: white;
+    background-color: $light-med;
     border-radius: 50%;
     padding: 10%;
+    transition: all 0.4s;
+}
+
+img.skill-icon:hover {
+    background-color: $neutral-light;
+    cursor: pointer;
 }
 
 .skills-section-title,
@@ -65,12 +66,12 @@ img.skill-icon {
 
 .skills-section-title h2 {
     font-size: 2.5rem;
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0.6);
     letter-spacing: 0.1rem;
 }
 
 .resume {
-    top: 10.8rem;
+    top: 16.4rem;
     right: 12%;
 }
 
@@ -83,6 +84,19 @@ img.skill-icon {
 .btn.resume-link:active {
     background-color: darken($primary-med, 5);
 }
+
+.highlite-wrapper {
+    width: 8rem;
+    height: 8rem;
+    background-color: $neutral-dark;
+    border-radius: 50%;
+}
+
+// .standingMan {
+//     display: none;
+//     position: absolute;
+//     width: 4%;
+// }
 
 
 
@@ -108,7 +122,7 @@ img.skill-icon {
         left: 12%;
     }
     .resume {
-        top: 10.8rem;
+        top: 16.4rem;
         right: 12%;
     }
 }
@@ -129,6 +143,11 @@ img.skill-icon {
         right: unset;
         left: 25%;
     }
+    // .standingMan {
+    //     display: block;
+    //     bottom: 4.5rem;
+    //     left: 36%;
+    // }
 }
 
 @media (min-width: 992px) {
@@ -141,10 +160,16 @@ img.skill-icon {
     .resume {
         left: 30%;
     }
+    // .standingMan {
+    //     left: 39%;
+    // }
 }
 
 @media (min-width: 1200px) {
     .skills-content .skills.first.row:before {
         left: -50%;
     }
+    // .standingMan {
+    //     left: 38%;
+    // }
 }
