@@ -1,0 +1,150 @@
+
+
+section.skills {
+    transform: rotate(180deg);
+    margin-top: -14rem;
+}
+
+.skills-content-wrapper,
+.skills-content,
+.skills-content > .row {
+    height: 100%;
+}
+
+.skills-content > .row {
+    padding: 5rem 0;
+}
+
+.skills-content-wrapper {
+    transform: rotate(175deg);
+    padding: 0 10%;
+    overflow: hidden;
+}
+
+.skills-content .skills {
+    // margin-top: 4rem;
+    // padding: 0 10%;
+}
+
+.skills-content .skills:before {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 2px;
+    top: 50%;
+    background-color: white;
+}
+
+.skills-content .skills.first.row:before {
+    left: -40%;
+}
+
+.skills-content .skills.second.row:before {
+    right: -48%;
+}
+
+.skills-content {
+    margin-top: 0rem;
+}
+
+img.skill-icon {
+    width: 2rem;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10%;
+}
+
+.skills-section-title,
+.resume {
+    position: absolute;
+}
+
+.skills-section-title {
+    display: none;
+}
+
+.skills-section-title h2 {
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 0.1rem;
+}
+
+.resume {
+    top: 10.8rem;
+    right: 12%;
+}
+
+.btn.resume-link,
+.btn.resume-link:visited {
+    background-color: $primary-med;
+}
+
+.btn.resume-link:hover,
+.btn.resume-link:active {
+    background-color: darken($primary-med, 5);
+}
+
+
+
+@media (min-width: 400px) {
+    .skills-content .skills.first.row:before {
+        left: -47%;
+    }
+}
+
+@media (min-width: 576px) {
+    img.skill-icon {
+        width: 3rem;
+    }
+    .skills-content > .row {
+        padding: 4.5rem 0;
+    }
+    .skills-content .skills.first.row:before {
+        left: -45%;
+    }
+    .skills-section-title {
+        display: block;
+        top: 10.7rem;
+        left: 12%;
+    }
+    .resume {
+        top: 10.8rem;
+        right: 12%;
+    }
+}
+
+@media (min-width: 768px) {
+    .skills-content .skills.first.row:before {
+        left: -43%;
+    }
+    .skills-section-title {
+        bottom: unset;
+        top: 4.7rem;
+        left: unset;
+        right: 22%;
+    }
+    .resume {
+        top: unset;
+        bottom: 5rem;
+        right: unset;
+        left: 25%;
+    }
+}
+
+@media (min-width: 992px) {
+    .skills-content .skills.first.row:before {
+        left: -47%;
+    }
+    .skills-section-title {
+        right: 26%;
+    }
+    .resume {
+        left: 30%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .skills-content .skills.first.row:before {
+        left: -50%;
+    }
+}
