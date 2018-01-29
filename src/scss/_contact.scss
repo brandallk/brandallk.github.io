@@ -9,13 +9,11 @@
 }
 
 #contact-wrapper, #contact .section-title {
-    background-color: #3a4040;
-    // background-image: url("../img/overlay.png");
+    background-color: $secondary-dark;
 }
 
 .form-submit {
     background-color: $primary-med;
-    // background-image: url("../img/overlay.png");
     border-color: $primary-dark;
 }
 .form-submit:hover, .form-submit:active {
@@ -23,7 +21,7 @@
     border-color: $primary-dark;
 }
 
-.horizontal-divider.contact { width: 94%; margin: 3rem auto 1.5rem; background-color: #4d4d4d; }
+.horizontal-divider.contact { width: 94%; margin: 3rem auto 1.5rem; background-color: $neutral-med2; }
 @media (min-width: 992px) { .horizontal-divider.contact { display: none; } }
 
 #contact-wrapper a { color: $light-med; }

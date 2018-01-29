@@ -92,12 +92,6 @@ img.skill-icon:hover {
     border-radius: 50%;
 }
 
-// .standingMan {
-//     display: none;
-//     position: absolute;
-//     width: 4%;
-// }
-
 
 
 @media (min-width: 400px) {
@@ -143,11 +137,6 @@ img.skill-icon:hover {
         right: unset;
         left: 25%;
     }
-    // .standingMan {
-    //     display: block;
-    //     bottom: 4.5rem;
-    //     left: 36%;
-    // }
 }
 
 @media (min-width: 992px) {
@@ -160,16 +149,10 @@ img.skill-icon:hover {
     .resume {
         left: 30%;
     }
-    // .standingMan {
-    //     left: 39%;
-    // }
 }
 
 @media (min-width: 1200px) {
     .skills-content .skills.first.row:before {
         left: -50%;
     }
-    // .standingMan {
-    //     left: 38%;
-    // }
 }

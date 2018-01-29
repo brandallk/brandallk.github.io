@@ -4,7 +4,6 @@ body {
 
 .projects {
     position: relative;
-    // background-color: $light-med;
     padding-bottom: 1rem;
 }
 
@@ -33,7 +32,6 @@ body {
 }
 
 .project-card.project:hover {
-    // box-shadow: 0 0 7px $neutral-dark;
     border: solid $primary-light;
     cursor: pointer;
 }
