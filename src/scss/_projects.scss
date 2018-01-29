@@ -1,26 +1,41 @@
-body {
-    background-color: $light-med;
-}
 
 .projects {
     position: relative;
     padding-bottom: 1rem;
-}
 
-.projects:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 59rem;
-    bottom: 0rem;
-    left: 0;
-    background-color: $primary-light;
+    &:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 59rem;
+        bottom: 0rem;
+        left: 0;
+        background-color: $primary-light;
+
+        @include MQ(MD) {
+            height: 35rem;
+        }
+        @include MQ(LG) {
+            height: 37rem;
+        }
+        @include MQ(XL) {
+            height: 45rem;
+        }
+    }
 }
 
 .project-grid {
     margin-top: 2rem;
     margin-bottom: 10rem;
     padding: 0 4rem;
+
+    @include MQ(MD) {
+        margin-top: 5rem;
+        padding: 0 4rem;
+    }
+    @include MQ(LG) {
+        padding: 0 10rem;
+    }
 }
 
 .project-card {
@@ -29,141 +44,92 @@ body {
     justify-content: center;
     align-items: center;
     color: $light-med;
-}
 
-.project-card.project:hover {
-    border: solid $primary-light;
-    cursor: pointer;
-}
+    @include MQ(MD) {
+        height: 12rem;
+    }
+    @include MQ(LG) {
+        height: 13rem;
+    }
+    @include MQ(XL) {
+        height: 17rem;
+    }
 
-.project-card a:hover {
-    text-decoration: none;
-}
+    &.project:hover {
+        border: solid $primary-light;
+        cursor: pointer;
+    }
 
-.project-card.machine {
-    display: none;
-}
+    a:hover {
+        text-decoration: none;
+    }
 
-.project-card.title {
-    background-color: $neutral-dark;
-    position: relative;
-}
+    &.machine {
+        display: none;
+        justify-content: center;
+        align-items: center;
 
-.project-card.title .sittingMan,
-.project-card.title .carryingMan {
-    display: none;
-}
+        @include MQ(MD) {
+            display: flex;
+        }
+    }
 
-.project-card.project.one {
-    background-color: $primary-dark;
-}
+    img.machine {
+        width: 100%;
+    }
 
-.project-card.machine.one {
-    background-color: $primary-light;
-}
+    &.title {
+        background-color: $neutral-dark;
+        position: relative;
+    }
 
-.project-card.project.two {
-    background-color: $contrast-1-dark;
-}
+    &.project.one {
+        background-color: $primary-dark;
+    }
 
-.project-card.project.three {
-    background-color: $primary-med;
-}
+    &.machine.one {
+        background-color: $primary-light;
+    }
 
-.project-card.project.four {
-    background-color: $neutral-dark;
-}
+    &.project.two {
+        background-color: $contrast-1-dark;
+    }
 
-.project-card.machine.three {
-    background-color: $light-med;
-}
+    &.project.three {
+        background-color: $primary-med;
+    }
 
-.project-card.project.five {
-    background-color: $primary-dark;
+    &.project.four {
+        background-color: $neutral-dark;
+    }
+
+    &.machine.three {
+        background-color: $light-med;
+    }
+
+    &.project.five {
+        background-color: $primary-dark;
+    }
 }
 
 .project-card-wrapper {
     padding: 0 0.5rem;
 }
 
-.project-card.machine {
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-
-.project-card .machine {
-    width: 100%;
-}
-
 .project-title {
     font-size: 1.4rem;
     text-align: center;
     letter-spacing: 0.1rem;
-}
 
-.project-title.alternate {
-    width: 80%;
-    margin-left: 10%;
-    max-height: 3.5rem;
+    &.alternate {
+        width: 80%;
+        margin-left: 10%;
+        max-height: 3.5rem;
+    }
 }
 
 .project-desc-short {
     font-size: 0.75rem;
     line-height: 1.5rem;
     text-align: center;
-}
-
-
-
-/* media queries */
-@media (min-width: 576px) {
-    .project-card.title .sittingMan,
-    .project-card.title .carryingMan {
-        display: block;
-        width: 15%;
-        position: absolute;
-    }
-
-    .project-card.title .sittingMan {
-        top: -21%;
-        left: -5%;
-    }
-
-    .project-card.title .carryingMan {
-        top: -30%;
-        left: 30%;
-    }
-}
-
-@media (min-width: 768px) {
-    .project-card {
-        height: 12rem;
-        &.machine {
-            display: flex;
-        }
-    }
-    .project-card.title .sittingMan {
-        width: 25%;
-        top: -16%;
-        left: -5%;
-    }    
-    .project-card.title .carryingMan {
-        width: 25%;
-        top: -23%;
-        left: 30%;
-    }
-    .project-grid { margin-top: 5rem; padding: 0 4rem; }
-    .projects:before { height: 35rem; }
-}
-
-@media (min-width: 992px) {
-    .project-card { height: 13rem; }
-    .project-grid { padding: 0 10rem; }
-    .projects:before { height: 37rem; }
-}
-
-@media (min-width: 1200px) {
-    .project-card { height: 17rem; }
-    .projects:before { height: 45rem; }
 }

@@ -1,5 +1,4 @@
 
-
 .about .central-box {
     display: flex;
     justify-content: center;
@@ -9,6 +8,19 @@
 .about-content-wrapper {
     transform: rotate(-5deg);
     margin: 0 4rem;
+
+    @include MQ(SM) {
+        margin: 0 8rem;
+    }
+    @include MQ(MD) {
+        margin: 0 13rem;
+    }
+    @include MQ(LG) {
+        margin: 0 20rem;
+    }
+    @include MQ(XL) {
+        margin: 0 28rem;
+    }
 }
 
 .about-title {
@@ -17,6 +29,14 @@
     color: lighten($primary-light, 15);
     margin-bottom: 1rem;
     letter-spacing: 3px;
+
+    @include MQ(XXS) {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+    @include MQ(SM) {
+        font-size: 1.5rem;
+    }
 }
 
 .divider {
@@ -25,6 +45,10 @@
     background-color: lighten($primary-dark, 15);
     margin: auto;
     margin-bottom: 1rem;
+
+    @include MQ(XXS) {
+        margin-bottom: 2rem;
+    }
 }
 
 .about .content {
@@ -32,31 +56,12 @@
     color: lighten($primary-light, 10);
     line-height: 1.5rem;
     font-size: 0.7rem;
-}
 
-
-
-/* media queries */
-@media (min-width: 400px) {
-    .about-title { font-size: 1.1rem; margin-bottom: 2rem; }
-    .divider { margin-bottom: 2rem; }
-    .about .content { font-size: 0.8rem; line-height: 1.7rem; }
-}
-
-@media (min-width: 576px) {
-    .about-content-wrapper { margin: 0 8rem; }
-    .about-title { font-size: 1.5rem; }
-    .about .content { font-size: 1rem; }
-}
-
-@media (min-width: 768px) {
-    .about-content-wrapper { margin: 0 13rem; }
-}
-
-@media (min-width: 992px) {
-    .about-content-wrapper { margin: 0 20rem; }
-}
-
-@media (min-width: 1200px) {
-    .about-content-wrapper { margin: 0 28rem; }
+    @include MQ(XXS) {
+        font-size: 0.8rem;
+        line-height: 1.7rem;
+    }
+    @include MQ(SM) {
+        font-size: 1rem;
+    }
 }

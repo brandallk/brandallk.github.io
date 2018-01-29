@@ -12,6 +12,12 @@
     overflow: hidden;
 }
 
+    section.skills {
+        .shapes-wrapper {
+            height: 40rem;
+        }
+    }
+
 .central-box {
     position: absolute;
     width: 115%;
@@ -26,6 +32,12 @@
     transform: rotate(5deg);
     overflow: hidden;
 }
+
+    section.skills {
+        .central-box {
+            height: 30rem;
+        }
+    }
 
 .inner, .outer {
     position: absolute;
@@ -54,47 +66,41 @@
     left: -13%;
 }
 
+    section.skills {
+        .top.inner {
+            left: -26%;
+        }
+    }
+
 .bottom.inner {
     bottom: -6rem;
     right: -13%;
 }
+
+    section.skills {
+        .bottom.inner {
+            right: -17%;
+        }
+    }
 
 .top.outer {
     top: 5rem;
     right: -13%;
 }
 
+    section.skills {
+        .top.outer {
+            right: -23%;
+        }
+    }
+
 .bottom.outer {
     bottom: 5rem;
     left: -14%;
 }
 
-
-
-section.skills {
-
-    .shapes-wrapper {
-        height: 40rem;
+    section.skills {
+        .bottom.outer {
+            left: -23%;
+        }
     }
-
-    .central-box {
-        height: 30rem;
-    }
-    
-    .top.inner {
-        left: -26%;
-    }
-    
-    .bottom.inner {
-        right: -17%;
-    }
-    
-    .top.outer {
-        right: -23%;
-    }
-    
-    .bottom.outer {
-        left: -23%;
-    }
-
-}

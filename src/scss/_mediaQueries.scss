@@ -1,0 +1,38 @@
+
+/* Breakpoints */
+$XXS: 400px; 
+$XS:  450px; 
+$SM:  576px; 
+$MD:  768px; 
+$LG:  992px; 
+$XL: 1200px;
+
+@mixin MQ($breakpoint) {
+    @if $breakpoint == XXS {
+        @media (min-width: $XXS) { @content; }
+    }
+    @if $breakpoint == XS {
+        @media (min-width: $XS) { @content; }
+    }
+    @if $breakpoint == SM {
+        @media (min-width: $SM) { @content; }
+    }
+    @if $breakpoint == SMandBelow {
+        @media (max-width: $SM) { @content; }
+    }
+    @if $breakpoint == MD {
+        @media (min-width: $MD) { @content; }
+    }
+    @if $breakpoint == MDandBelow {
+        @media (max-width: $MD) { @content; }
+    }
+    @if $breakpoint == LG {
+        @media (min-width: $LG) { @content; }
+    }
+    @if $breakpoint == LGandBelow {
+        @media (max-width: $LG) { @content; }
+    }
+    @if $breakpoint == XL {
+        @media (min-width: $XL) { @content; }
+    }
+}

@@ -1,74 +1,109 @@
- /********************************************
-  * Header
-  *******************************************/
- 
+
 #header-wrapper {
     background:
-        url(../../img/banner-bg.png)
+        url(https://www.dropbox.com/s/q5o022y80fy9psr/banner-bg.png?raw=1)
         center center / cover;
-    color: #b3b3b3;
+    color: $light-darker;
     padding-bottom: 9rem;
     letter-spacing: 0.25rem;
+
+    @include MQ(SM) {
+        padding-bottom: 14rem;
+    }
 }
 
-@media (min-width: 576px) { #header-wrapper { padding-bottom: 14rem; } }
 
+/******* Navbar *******/
 
-    /******* Navbar *******/
-
-    #navbar { margin-bottom: 6rem; }
-
-    .navbar-nav { border: #b3b3b3 solid 1px; border-radius: 5px; }
-
-    .nav-link { color: #b3b3b3; }
-
-    @media (max-width: 768px) {
-        #navbar { margin-bottom: 2rem; }
-        .navbar-nav { border: none; }
-        .navbar-nav .nav-link {
-            background-color: #313d3d;
-            padding-left: 2.5rem;
-            border-bottom: solid 1px;
-        }
+#navbar {
+    margin-bottom: 6rem;
+    @include MQ(MDandBelow) {
+        margin-bottom: 2rem;
     }
+}
 
-
-    .benjamen-photo {
-        text-align: center;
+.navbar-nav {
+    border: $light-darker solid 1px;
+    border-radius: 5px;
+    @include MQ(MDandBelow) {
+        border: none;
     }
+}
 
-    .benjamen-photo img {
+.nav-link {
+    color: $light-darker;
+}
+
+.navbar-nav .nav-link {
+    @include MQ(MDandBelow) {
+        background-color: $neutral-dark2;
+        padding-left: 2.5rem;
+        border-bottom: solid 1px;
+    }
+}
+
+
+.benjamen-photo {
+    text-align: center;
+
+    img {
         width: 7rem;
         margin-bottom: 3rem;
         border-radius: 50%;
         box-shadow: 0 0 5px $primary-dark;
     }
+}
 
 
-    /******* Title *******/
+/******* Title *******/
 
-    .header-title { color: #f2f2f2; }
+.header-title {
+    color: $light-light;
 
-    .header-title .hr { background-color: #f2f2f2; }
+    h1 {
+        @include MQ(LGandBelow) {
+            font-size: 2.5rem;
+        }
+    }
+}
 
-    .slogan {letter-spacing: 0.1rem; }
+.header-title .hr {
+    background-color: $light-light;
+}
 
-    .slogan:not(:first-of-type) { color: #b3b3b3; }
-
-    @media (max-width: 992px) {
-        .header-title h1 { font-size: 2.5rem; }
-        .header-title .slogan { font-size: 1.2rem; }
-        .header-title .slogan:first-of-type {font-size: 1.5rem; }
+.slogan {
+    letter-spacing: 0.1rem;
+    @include MQ(SMandBelow) {
+        font-size: 0.8rem;
+    }
+    @include MQ(LGandBelow) {
+        font-size: 1.2rem;
     }
 
-    @media (max-width: 576px) {
-        .header-title .slogan { font-size: 0.8rem; }
-        .header-title .slogan:first-of-type { font-size: 1rem; }
+    &:first-of-type {
+        @include MQ(SMandBelow) {
+            font-size: 1rem;
+        }
+        @include MQ(LGandBelow) {
+            font-size: 1.5rem;
+        }
     }
+}
+
+.slogan:not(:first-of-type) {
+    color: $light-darker;
+}
 
 
-    /******* Doodle *******/
+/******* Doodle *******/
 
-    .doodle { margin-top: 0; max-width: 1000px; }
-    @media (min-width: 450px) { .doodle { margin-top: -2rem; } }
-    @media (min-width: 576px) { .doodle { margin-top: -4rem; } }
+.doodle {
+    margin-top: 0;
+    max-width: 1000px;
+    @include MQ(XS) {
+        margin-top: -2rem;
+    }
+    @include MQ(SM) {
+        margin-top: -4rem;
+    }
+}
